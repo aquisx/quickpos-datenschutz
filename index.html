@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QuickPos für Android – Datenschutzerklärung</title>
+<style>
+  :root { color-scheme: light dark; --text: #1d1d1b; --muted: #5b5b57; --line: #d9d9d4; --accent: #075033; --bg: #ffffff; }
+  @media (prefers-color-scheme: dark) {
+    :root { --text: #ecece8; --muted: #a9a9a3; --line: #3a3a37; --accent: #7fd1a8; --bg: #161615; }
+  }
+  body { margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 46rem; margin: 0 auto; padding: 2.5rem 1.25rem 4rem; }
+  h1 { font-size: 1.9rem; line-height: 1.25; margin: 0 0 .25rem; color: var(--accent); }
+  h2 { font-size: 1.2rem; margin: 2.2rem 0 .5rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+  p, ul { margin: .6rem 0; }
+  ul { padding-left: 1.3rem; }
+  li { margin: .3rem 0; }
+  .stand { color: var(--muted); margin-bottom: 1.5rem; }
+  code { font-size: .92em; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+<h1>Datenschutzerklärung für QuickPos für Android</h1>
+<p class="stand">Stand: 11. November 2026</p>
+
+<p>QuickPos ist eine App für Beschäftigte der Bechtle-Gruppe, die mit dem Ticket- und
+Zeiterfassungssystem BPOS arbeiten: Tickets und Aufgaben ansehen und bearbeiten, Zeiten buchen.
+Die App ist ohne BPOS-Zugang nicht nutzbar. Sie ist kein offizielles Werkzeug von Bechtle IT.
+Diese Erklärung beschreibt, welche Daten die App verarbeitet, wohin sie gehen und wie lange sie
+bleiben.</p>
+
+<h2>1. Anbieter und Kontakt</h2>
+<p>Anbieter der App: Janus Dyckhoff, Bechtle IT-Systemhaus Bonn<br>
+E-Mail: <a href="mailto:janus.dyckhoff@bechtle.com">janus.dyckhoff@bechtle.com</a></p>
+<p>Für die Daten in BPOS (Tickets, Aufgaben, Zeiterfassungen, Kunden- und Kontaktdaten) ist
+Bechtle als Betreiber von BPOS verantwortlich. Fragen dazu beantwortet der Datenschutz der
+Bechtle AG, Bechtle Platz 1, 74172 Neckarsulm:
+<a href="mailto:privacy@bechtle.com">privacy@bechtle.com</a>.</p>
+
+<h2>2. Anmeldung</h2>
+<p>Die Anmeldung läuft in einer Webansicht über BPOS, die Anmeldeseite von Bechtle (Keycloak,
+<code>www.bechtle.com/auth</code>) und Microsoft Entra ID. Benutzername, Passwort und
+Mehrfaktor-Bestätigung geben Sie auf diesen Seiten ein; die App liest und speichert sie nicht.
+Nach der Anmeldung übernimmt die App die Sitzungscookies von BPOS und speichert sie
+verschlüsselt (Android Keystore) im internen Speicher der App, damit Sie angemeldet bleiben.
+„Abmelden“ löscht sie, auf Wunsch auch die Microsoft-Anmeldung.</p>
+
+<h2>3. Daten aus BPOS</h2>
+<p>Die App lädt Tickets, Aufgaben und Zeiterfassungen aus BPOS und zeigt sie an. Diese Daten
+können personenbezogene Daten enthalten, etwa Namen und Kontaktdaten von Kunden und Kollegen
+sowie Ticketverläufe. Was Sie in der App ändern (Einträge, Zeitbuchungen, Statuswechsel,
+Anhänge, Mails), sendet die App an BPOS. Die App überträgt diese Daten an keinen anderen
+Empfänger.</p>
+<p>Auf dem Gerät hält die App geladene Ticketdaten nur im Arbeitsspeicher. Schalten Sie
+„Offline lesen“ ein, speichert sie den zuletzt geladenen Stand verschlüsselt mit einem
+eigenen Schlüssel, der nur bei entsperrtem Gerät nutzbar ist. Timer, noch nicht gesendete
+Buchungen und Aktionen, Entwürfe und Einstellungen liegen im internen Speicher der App, damit
+nichts verloren geht. Zur Vorschau geladene Anhänge liegen nur im Cache und werden beim
+Schließen gelöscht. In die App geteilte Dateien bleiben bis zur Zuordnung zu einem Ticket
+gespeichert, höchstens sieben Tage.</p>
+<p>Die App schließt ihre Daten von Android-Sicherungen und der Übertragung auf andere Geräte
+aus. Die App-Sperre (Voreinstellung aus) nutzt Biometrie oder Displaysperre von Android; die
+App erhält dabei nur das Ergebnis, keine biometrischen Daten.</p>
+
+<h2>4. Nutzungsdaten (Telemetrie)</h2>
+<p>Solange „Nutzungsdaten senden“ in den Einstellungen eingeschaltet ist (Voreinstellung), sendet
+die App einmal am Tag anonyme Zähler an den QuickPos-Telemetrie-Dienst
+(<code>easybpos-telemetry.bechtlab.de</code>):</p>
+<ul>
+<li>wie oft Sie gebucht, Einträge geschrieben, Mails gesendet, den Status gewechselt, Tickets
+  übernommen oder weitergeleitet, Calls und Logbucheinträge angelegt, Anhänge hinzugefügt und
+  Timer gestartet haben, dazu geschätzt gesparte Klicks und Sekunden;</li>
+<li>App-Version, die Plattform „android“ und eine zufällige Installations-ID, die nichts über
+  Sie oder Ihr Gerät aussagt;</li>
+<li>nach einem Absturz dessen Art (Java, nativ, Hänger) und einen Fingerabdruck der
+  Absturzstelle.</li>
+</ul>
+<p>Nie gesendet werden Ticket- oder Aufgabennummern, Namen, Texte, Anhänge, Hostnamen oder
+Inhalte von Absturzberichten. Der Dienst läuft auf Infrastruktur von Bechtle bei Amazon Web
+Services in Frankfurt (Region <code>eu-central-1</code>). Der Dienst selbst speichert keine
+IP-Adressen. Die Installations-ID behält er höchstens bis zum Ende des folgenden Tages (UTC), um aktive
+Installationen zu zählen; danach bleiben nur Summen je App-Version und Plattform. Schalten Sie
+„Nutzungsdaten senden“ aus, entsteht und geht nichts mehr, noch nicht Gesendetes wird
+verworfen. Im Demo-Modus sendet die App nicht.</p>
+
+<p>Telemetrie-Dienst und GitLab (Abschnitt 5) liegen hinter Amazon CloudFront und AWS WAF von
+Bechtle. Diese protokollieren jeden Zugriff mit IP-Adresse, Zeitpunkt und angefragter Adresse
+zum Schutz vor Angriffen; ebenso protokollieren BPOS, Keycloak und Microsoft Zugriffe nach
+ihren eigenen Regeln.</p>
+
+<h2>5. Fehlerbericht</h2>
+<p>Nur wenn Sie „Fehler melden …“ wählen und senden, legt die App ein vertrauliches Issue im
+GitLab von Bechtle (<code>gitlab.bonn.bechtle.com</code>, Projekt quickpos-android) an. Vorher
+zeigt eine Vorschau genau, was gesendet wird: Titel und Beschreibung, auf Wunsch Bilder (ohne
+Aufnahmeort), ein Diagnoseprotokoll und Absturzberichte. Diagnoseprotokoll und Absturzberichte
+enthalten keine Tokens, Cookies, Namen, Adressen, Texte oder Ticketnummern; jedes Teil lässt
+sich abwählen. Das Issue sehen die Mitglieder des Projekts, es erscheint unter Ihrem
+GitLab-Konto. Ihre GitLab-Anmeldung speichert die App verschlüsselt auf dem Gerät, getrennt von
+BPOS. Alternativ können Sie den Bericht ohne GitLab über das Teilen-Menü von Android
+weitergeben.</p>
+
+<h2>6. Kalender</h2>
+<p>Schalten Sie „Termine aus dem Kalender“ ein, fragt Android nach der Berechtigung, Kalender
+zu lesen. Die App zeigt dann im Tab „Zeiten“ die Termine der Kalender, die Sie ausgewählt
+haben. Termine verlassen das Gerät nicht.</p>
+
+<h2>7. Mitteilungen</h2>
+<p>Mitteilungen über neue Tickets und Aufgaben erzeugt die App selbst auf dem Gerät, nach einem
+Abgleich mit BPOS im Hintergrund. Es gibt keinen Push-Dienst. Auf dem Sperrbildschirm zeigen
+Mitteilungen nur eine Kurzfassung.</p>
+
+<h2>8. Dokumentscanner und KI-Assistent (Google)</h2>
+<p>Der Dokumentscanner und der KI-Assistent (Gemini Nano) stammen von Google (ML Kit) und
+rechnen nur auf dem Gerät; Bilder und Ticketdaten gehen dabei nicht an Google. Der Assistent
+ist ausgeschaltet, bis Sie ihn einschalten. Die Nutzungsstatistik von ML Kit an Google ist
+abgeschaltet. Den Scanner stellen die Google-Play-Dienste bereit, das Sprachmodell der
+Systemdienst AICore: Diese laden Scanner und Modell bei Bedarf von Google, die
+Google-Play-Dienste können Google dabei Dauer und Ergebnis des Aufrufs melden. Dafür gilt die
+<a href="https://policies.google.com/privacy">Datenschutzerklärung von Google</a>. Für die
+Installation über Google Play gilt sie ebenfalls.</p>
+
+<h2>9. Demo-Modus</h2>
+<p>Der Demo-Modus zeigt erfundene Daten. Die App spricht darin nicht mit BPOS und sendet keine
+Nutzungsdaten.</p>
+
+<h2>10. Was die App nicht tut</h2>
+<ul>
+<li>keine Werbung, kein Tracking, keine Analyse- oder Werbe-SDKs;</li>
+<li>kein Verkauf und keine Weitergabe von Daten an Dritte außer den oben genannten Empfängern;</li>
+<li>kein Zugriff auf Standort, Kontakte, Mikrofon oder Kamera (Fotos für den Scanner nimmt der
+  Scanner der Google-Play-Dienste auf, nur auf Ihren Tipp).</li>
+</ul>
+
+<h2>11. Rechtsgrundlagen</h2>
+<ul>
+<li>Anmeldung und Arbeit mit BPOS: Ihre Tätigkeit für Bechtle; es gelten die Regelungen Ihres
+  Arbeitgebers zu BPOS.</li>
+<li>Nutzungsdaten: berechtigtes Interesse an einer stabilen, verbesserten App (Art. 6 Abs. 1
+  lit. f DSGVO). Sie können jederzeit widersprechen, indem Sie „Nutzungsdaten senden“
+  ausschalten.</li>
+<li>Fehlerbericht: Ihre Einwilligung durch das Senden (Art. 6 Abs. 1 lit. a DSGVO).</li>
+<li>Kalender: Ihre Einwilligung durch das Einschalten und die Berechtigung (Art. 6 Abs. 1 lit. a
+  DSGVO).</li>
+</ul>
+
+<h2>12. Speicherdauer und Löschung</h2>
+<ul>
+<li>Daten auf dem Gerät: bis zum Abmelden, Ausschalten der jeweiligen Funktion oder
+  Deinstallieren der App; das Deinstallieren löscht alle Daten der App auf dem Gerät.</li>
+<li>Nutzungsdaten: wie in Abschnitt 4 beschrieben.</li>
+<li>Fehlerberichte: bis das Issue geschlossen und gelöscht wird; auf Anfrage löschen wir es.</li>
+</ul>
+
+<h2>13. Ihre Rechte</h2>
+<p>Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
+Datenübertragbarkeit und Widerspruch (Art. 15 bis 21 DSGVO) sowie das Recht, sich bei einer
+Datenschutz-Aufsichtsbehörde zu beschweren. Wenden Sie sich dafür an die Kontakte in
+Abschnitt 1.</p>
+
+<h2>14. Änderungen</h2>
+<p>Ändert sich, was die App verarbeitet, passen wir diese Erklärung an. Es gilt die Fassung auf
+dieser Seite.</p>
+</main>
+</body>
+</html>
